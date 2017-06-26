@@ -1,6 +1,6 @@
 {% set version = "0.99b6" %}
 {% set name = "tachyon" %}
-{% set md5 = "9e5ed4045c472e01e57480d7c7eee849" %}
+{% set sha256 = "fec170e1286f6097f893f19e51ec597631cfd26d1fcc9ae8680ad9595b4598e6" %}
 
 package:
   name: {{ name }}
@@ -8,16 +8,8 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: http://pkgs.fedoraproject.org/repo/pkgs/{{ name }}/{{ name }}-{{ version }}.tar.gz/{{ md5 }}/{{ name }}-{{ version }}.tar.gz
-  md5: {{ md5 }}
-  patches:
-    # Patches taken from https://github.com/sagemath/sage/tree/develop/build/pkgs/tachyon/patches
-    # Use cc from environment
-    - patches/Make-arch.patch
-    # Use libpng
-    - patches/Make-config.patch
-    # Use LDFLAGS from environment
-    - patches/Makefile.patch
+  url: http://jedi.ks.uiuc.edu/~johns/raytracer/files/{{ version }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   number: 0
@@ -25,7 +17,7 @@ build:
 
 requirements:
   build:
-    - toolchain
+    - toolchain3
     - libpng >=1.6.28,<1.7
   run:
     - libpng >=1.6.28,<1.7
