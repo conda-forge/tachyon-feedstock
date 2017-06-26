@@ -2,7 +2,7 @@
 
 cd unix
 case "$(uname)" in
-    Darwin) target=macosx-x86_64-thr;;
+    Darwin) target=macosx-thr;;
     Linux) target=linux-64-thr;;
 esac
 
