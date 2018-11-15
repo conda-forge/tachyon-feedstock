@@ -16,7 +16,7 @@ if [ "$(uname)" == "Linux" ]; then
     make all \
     "ARCH = linux-64-thr" \
     "CC = $CC" \
-    "CFLAGS = -m64 -Wall -O3 -fomit-frame-pointer -ffast-math -DLinux  -DTHR -DUSEATOMICBARRIERS -D_REENTRANT -DUSEPNG -DUSEJPEG $CFLAGS" \
+    "CFLAGS = -m64 -Wall -O3 -fomit-frame-pointer -ffast-math -DLinux  -DTHR -DUSEATOMICBARRIERS -D_REENTRANT -DUSEPNG -DUSEJPEG $CPPFLAGS $CFLAGS" \
     "AR = $AR" \
     "ARFLAGS = r" \
     "STRIP = $STRIP" \
@@ -27,7 +27,7 @@ else
 make all \
 	"ARCH = macosx-x86-thr" \
 	"CC = $CC" \
-	"CFLAGS = -Os -ffast-math -DBsd -DTHR -DUSEATOMICBARRIERS -DUSEPNG -DUSEJPEG $CFLAGS" \
+	"CFLAGS = -Os -ffast-math -DBsd -DTHR -DUSEATOMICBARRIERS -DUSEPNG -DUSEJPEG $CPPFLAGS $CFLAGS" \
     "AR = $AR" \
     "ARFLAGS = r" \
     "STRIP = $STRIP" \
