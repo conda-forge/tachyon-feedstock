@@ -12,15 +12,20 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1001
   skip: true  # [win]
 
 requirements:
   build:
-    - toolchain3
-    - libpng >=1.6.28,<1.7
+    - {{ compiler('c') }}
+  host:
+    - libpng
+    - zlib
+    - jpeg
   run:
-    - libpng >=1.6.28,<1.7
+    - libpng
+    - zlib
+    - jpeg
 
 test:
   commands:
