@@ -12,7 +12,7 @@ if [ -z "$AR" ]; then
     export AR=ar
 fi
 
-if [ "${target_platform}" == linux* ]; then
+if [[ "${target_platform}" == linux* ]]; then
     make all \
     "ARCH = linux-64-thr" \
     "CC = $CC" \
@@ -23,7 +23,7 @@ if [ "${target_platform}" == linux* ]; then
     "RANLIB = $RANLIB" \
     "LIBS = -L. -ltachyon $LDFLAGS -lpng -lz -ljpeg -lm -lpthread";
 else
-make all \
+    make all \
     "ARCH = macosx-x86-thr" \
     "CC = $CC" \
     "CFLAGS = -Os -ffast-math -DBsd -DTHR -DUSEATOMICBARRIERS -DUSEPNG -DUSEJPEG $CPPFLAGS $CFLAGS" \
