@@ -1,26 +1,19 @@
 c_compiler:
 - gcc
 c_compiler_version:
-- '7'
+- '11'
 cdt_name:
 - cos6
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
 docker_image:
-- quay.io/condaforge/linux-anvil-comp7
-jpeg:
-- '9'
+- quay.io/condaforge/linux-anvil-cos7-x86_64
+libjpeg_turbo:
+- 2.1.5
 libpng:
 - '1.6'
-pin_run_as_build:
-  jpeg:
-    max_pin: x
-  libpng:
-    max_pin: x.x
-  zlib:
-    max_pin: x.x
 target_platform:
 - linux-64
 zlib:
