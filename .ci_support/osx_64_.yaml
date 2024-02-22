@@ -3,13 +3,13 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '14'
+- '16'
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 libjpeg_turbo:
-- 2.1.5
+- '3'
 libpng:
 - '1.6'
 macos_machine:
