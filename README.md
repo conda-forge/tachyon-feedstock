@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tachyon-feedsto
 
 Home: http://jedi.ks.uiuc.edu/~johns/raytracer/
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Summary: Parallel/Multiprocessor Ray Tracing Software
 
@@ -191,4 +191,5 @@ Feedstock Maintainers
 =====================
 
 * [@isuruf](https://github.com/isuruf/)
+* [@saraedum](https://github.com/saraedum/)
 
