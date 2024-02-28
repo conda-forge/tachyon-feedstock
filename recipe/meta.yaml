@@ -8,7 +8,10 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: http://jedi.ks.uiuc.edu/~johns/raytracer/files/{{ version }}/{{ name }}-{{ version }}.tar.gz
+  # Upstream is down currently. We reached out to the author to see if there's
+  # a new source somewhere. In the meantime, we are using a Fedora mirror.
+  # url: http://jedi.ks.uiuc.edu/~johns/raytracer/files/{{ version }}/{{ name }}-{{ version }}.tar.gz
+  url: https://src.fedoraproject.org/lookaside/pkgs/tachyon/tachyon-0.99b6.tar.gz/9e5ed4045c472e01e57480d7c7eee849/tachyon-0.99b6.tar.gz
   sha256: {{ sha256 }}
 
 build:
