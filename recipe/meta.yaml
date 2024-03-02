@@ -1,6 +1,6 @@
 {% set version = "0.99b6" %}
 {% set name = "tachyon" %}
-{% set sha256 = "fec170e1286f6097f893f19e51ec597631cfd26d1fcc9ae8680ad9595b4598e6" %}
+{% set sha256 = "f4dcaf9c76a4f49310f56254390f9611c22e353947a1745a8c623e8bc8119b97" %}
 
 package:
   name: {{ name }}
@@ -8,11 +8,14 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: http://jedi.ks.uiuc.edu/~johns/raytracer/files/{{ version }}/{{ name }}-{{ version }}.tar.gz
+  # Upstream is down currently. We reached out to the author to see if there's
+  # a new source somewhere. In the meantime, we are using a Fedora mirror.
+  # url: http://jedi.ks.uiuc.edu/~johns/raytracer/files/{{ version }}/{{ name }}-{{ version }}.tar.gz
+  url: https://src.fedoraproject.org/lookaside/pkgs/tachyon/tachyon-0.99b6.tar.gz/9e5ed4045c472e01e57480d7c7eee849/tachyon-0.99b6.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1001
+  number: 1002
   skip: true  # [win]
 
 requirements:
@@ -22,11 +25,11 @@ requirements:
   host:
     - libpng
     - zlib
-    - jpeg
+    - libjpeg-turbo
   run:
     - libpng
     - zlib
-    - jpeg
+    - libjpeg-turbo
 
 test:
   commands:
@@ -35,7 +38,7 @@ test:
 
 about:
   home: http://jedi.ks.uiuc.edu/~johns/raytracer/
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: Copyright
   license_family: BSD
   summary: Parallel/Multiprocessor Ray Tracing Software
@@ -43,3 +46,4 @@ about:
 extra:
   recipe-maintainers:
     - isuruf
+    - saraedum
